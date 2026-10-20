@@ -9,14 +9,30 @@
     <p>Abra a console (F12) para ver o resultado.</p>
 
     <script>
-        // Parte da coleta: escreva os prompt() e o confirm() aqui
+
     let nome = String(prompt("Nome:"));
 
     let sobrenome = String(prompt("Sobrenome:"));
-  
-    let anodenascimento = String(prompt("Ano de nascimento:"));
 
-    let confimacao = Boolean(confirm("É aluno ativo da instituição?"));
+    let anodenascimento = Number(prompt("Ano de nascimento:"));
+
+    let confirmacao = Boolean(confirm("É aluno ativo da instituição?"));
+
+    // Parte do processamento
+    let idade = 2026 - anodenascimento;
+
+    let sobrenomeMaiusculo = sobrenome.toUpperCase();
+
+    let quantidadeLetras = nome.length;
+
+    // Parte da saída
+    console.log("CRACHÁ VIRTUAL: " + sobrenomeMaiusculo + ", " + nome);
+
+    console.log("Idade estimada: " + idade + " anos.");
+
+    console.log("O seu primeiro nome tem " + quantidadeLetras + " letras.");
+
+    console.log("Estatuto de aluno ativo: " + confirmacao);
 
     </script>
 </body>
